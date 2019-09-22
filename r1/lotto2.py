@@ -1,26 +1,26 @@
-# -*- coding: utf-8 -*-
-
 import numpy
 
-winning = []
+myLine = []
 blWin = False
 nTries = 0
 
-while len(winning) < 7:
+#generate winning Lotto line
+while len(myLine) < 7:
    number = numpy.random.randint(1,35)
-   if number not in winning:
-      winning.append(number)
+   if number not in myLine:
+      myLine.append(number)
 
+#generate draw
 while not blWin:
    blFinished = False
    nTries = nTries + 1
-   candidate = []
+   drawLine = []
    score = 0
    while not blFinished:
       number = numpy.random.randint(1,35)
-      if number not in candidate:
-         if number in winning:
-            candidate.append(number)
+      if number not in drawLine:
+         if number in myLine:
+            drawLine.append(number)
             score = score + 1
             if score == 7:
                blWin = True
@@ -29,8 +29,8 @@ while not blWin:
             blFinished = True
 
 
-winning.sort()
-candidate.sort()
-print("\n\nVinnerrekke:\t",winning)
-print("Vår rekke:\t", candidate)
+myLine.sort()
+drawLine.sort()
+print("\n\nVinnerrekke:\t",drawLine)
+print("Min rekke:\t", myLine)
 print("\nVi vant etter " , nTries , " forsøk!")
