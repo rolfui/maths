@@ -1,24 +1,24 @@
-# -*- coding: utf-8 -*-
-import matplotlib 
 import matplotlib.pyplot as plt
-import numpy 
+import numpy as np
 
-
-def derivert(f, x, delta_x):
-    return (f(x+delta_x)-f(x))/delta_x
 
 def f(x):
+    #return 1/x
     return x**2 + 2*x + 1
 
-x = numpy.linspace(-10,10,1000)
+def derivert(x, delta_x):
+    return (f(x+delta_x)-f(x))/delta_x
+
+x = np.linspace(-10,10,1000)
 y = f(x)
-plt.xlim(-2,2)
-plt.ylim(-1,3)
+
+plt.xlim(-10,10)
+plt.ylim(-10,10)
+
 plt.plot(x,y)
 
-y = derivert(f,x,1E-10)
+y = derivert(x,1E-10)
 plt.plot(x,y)
 
 plt.grid()
 plt.show()
-

@@ -19,12 +19,12 @@ def factorial(n):
 def nCr (n,r):
    return (factorial(n))/(factorial(r)*factorial(n-r))
 
-while probCandidate <= prob:
-   probCandidate = 0;
+while round(probCandidate,3) < prob:
+   probCandidate = 0
    k = k_min
    while k <= m:
       probCandidate = probCandidate + ( nCr(m,k) * nCr(n-m,r-k) ) / nCr(n,r)
       k = k+1
-   print("m: " , m, " prob: ", probCandidate)
+   print("m: " , m, " prob: ", round(probCandidate,3))
    m = m+1
 

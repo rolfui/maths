@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>abc</title>
+    <link rel="stylesheet" href="css/styles.css">  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.20.1/math.js"></script>
+</head>
+<body>
+    <script>
+        const fractionStrToDecimal = str => str.split('/').reduce((p, c) => p / c);
+        function fracStrToDecimal(strIn){
+            var frac = strIn.split('/');
+            frac.reduce(function(){a/b},a,b);
+            return Number(frac[0])/Number(frac[1]);
+        }
+        var a = math.fraction(prompt("a: "));
+        var b = Number(fracStrToDecimal(prompt("b: ")));
+        var c = Number(prompt("c: "));
+        
+        strOutput= b;
+                
+        document.write(strOutput);
+        
+    </script>
+
+</body>
+</html>
