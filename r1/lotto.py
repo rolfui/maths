@@ -21,4 +21,4 @@ while not blWin:
 
 print("\nMin rekke: ", candidate)
 print("\nVinnerrekke: ", winning)
-print("\nAntall trekninger: ", i);
+print("\nAntall trekninger: ", i)
