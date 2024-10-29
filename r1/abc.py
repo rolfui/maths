@@ -1,5 +1,5 @@
 from fractions import Fraction
-
+#test
 stra = input("a: ")
 a = float(Fraction(stra))
 strb = input("b: ")
